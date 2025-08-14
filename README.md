@@ -1,16 +1,16 @@
 
 # AI Agent 涉及的结构
-User prompt
+User prompt： 用户独立的要求
 
-System prompt 
+System prompt ：有点像python中的global variable，主要内容包括人设，一些通用的要求
 
-Function calling
+Function calling： 属于是对Agent和LLM（gpt等）之间交互的一种规范，因为LLM本质上是一个概率模型。会有回答出错的情况，而function calling的意义就是用json字段来实现统一模式，规范描述。
 
-Normal answer
+Normal answer ：Agent不经过处理，把用户说的内容直接给到AI，然后出问题了再修改，效率低。
 
-MCP  
+MCP  ：是一种通信协议。是Agent和Agent tools之间的通信方式。针对的是那些每个Agent都可能会需要的tool，比如访问网页这种。利用MCP通信协议，让Agent统一托管这些工具，达到简化调用代码的目的。
 
-AI Agent
+AI Agent:在工具，模型，和AI之间传话的程序叫做AI agent，其中调用的函数，程序，就叫agent tool
 
 # Chatflow 和 Workflow的区别
 我觉得搞清楚flow和agent的意义及关系是最重要的。
